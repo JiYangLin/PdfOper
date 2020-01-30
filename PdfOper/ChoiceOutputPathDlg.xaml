@@ -1,0 +1,34 @@
+﻿<Fluent:RibbonWindow x:Class="pdfOper.ChoiceOutputPathDlg"
+        xmlns:Fluent="urn:fluent-ribbon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Cursor="/pdfOper;component/Resource/curFile.cur"
+        Title="" Height="250" Width="350" ResizeMode="NoResize">
+    <StackPanel>
+        <Grid Margin="0 50 5 50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Fluent:TextBox Grid.Column="0"  IsEnabled="False" HorizontalAlignment="Center" VerticalAlignment="Center">输出文件路径</Fluent:TextBox>
+            <Fluent:TextBox  Grid.Column="1" IsEnabled="False" Name="tbPath"  ></Fluent:TextBox>
+        </Grid>
+
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+            <Fluent:Button  Grid.Column="1" Header="选择路径" Name="ChoiceDir" Click="ChoiceDir_Click"  LargeIcon="/pdfOper;component/Resource/dir.png" ></Fluent:Button>
+            <Fluent:Button  Grid.Column="2" Header="确定" Name="setConfirm" Click="SetConfirm_Click"  LargeIcon="/pdfOper;component/Resource/confirm.png" ></Fluent:Button>
+            <Fluent:Button  Grid.Column="3" Header="取消" Name="cancel" Click="Cancel_Click"  LargeIcon="/pdfOper;component/Resource/delete.png" ></Fluent:Button>
+        </Grid>
+        
+
+    </StackPanel>
+</Fluent:RibbonWindow>
